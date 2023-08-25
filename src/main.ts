@@ -4,7 +4,7 @@ import { Logger, ValidationPipe } from '@nestjs/common';
 
 import { AppModule } from './app.module';
 import { SERVER_PORT } from './config';
-import * as fs from "fs";
+import * as fs from 'fs';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
@@ -22,7 +22,6 @@ async function bootstrap() {
 
   await app.listen(port);
   logger.log(`Server is running at ${await app.getUrl()}`);
-
 }
 
 bootstrap();

@@ -1,6 +1,12 @@
-import {Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { BaseEntity } from '../../../commons';
-import {Course} from "../../course";
+import { Course } from '../../course';
 
 @Entity('estudiante')
 export class Student extends BaseEntity {
