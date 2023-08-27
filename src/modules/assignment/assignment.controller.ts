@@ -2,7 +2,9 @@ import { Controller, Get, HttpCode, HttpStatus, Param } from '@nestjs/common';
 import { AssignmentService } from './assignment.service';
 import { Assignment } from './entities';
 import { BaseController, BaseService } from '../../commons';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('assignment')
 @Controller('assignment')
 export class AssignmentController extends BaseController<Assignment> {
   constructor(private readonly assignmentService: AssignmentService) {

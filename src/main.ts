@@ -11,10 +11,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
 
   const configDoc = new DocumentBuilder()
-  .setTitle('Cats example')
-  .setDescription('The cats API description')
+  .setTitle('API Diseño Industrial')
+  .setDescription('API para la aplicacion de diseño industrial en el marco de UNaHur PPS-2023')
   .setVersion('1.0')
-  .addTag('cats')
   .build();
   const document = SwaggerModule.createDocument(app, configDoc);
   SwaggerModule.setup('api/doc', app, document);

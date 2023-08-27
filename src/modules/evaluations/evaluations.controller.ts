@@ -1,9 +1,11 @@
 import { Controller, Get, HttpCode, HttpStatus, Param } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { BaseController } from '../../commons';
 import { Evaluation } from './entities';
 import { EvaluationsService } from './evaluations.service';
 import { Student } from '../student';
 
+@ApiTags('evaluation')
 @Controller('evaluation')
 export class EvaluationsController extends BaseController<Evaluation> {
   constructor(private readonly evaluationsService: EvaluationsService) {

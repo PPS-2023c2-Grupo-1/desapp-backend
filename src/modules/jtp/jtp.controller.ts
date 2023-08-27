@@ -3,8 +3,9 @@ import {JtpService} from './jtp.service';
 import {BaseController} from '../../commons';
 import {Jtp} from './entities';
 import {Public} from "../../public.metadata";
+import { ApiTags } from '@nestjs/swagger';
 
-
+@ApiTags('jtp')
 @Controller('jtp')
 export class JtpController extends BaseController<Jtp> {
   constructor(private readonly jtpService: JtpService) {

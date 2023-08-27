@@ -4,7 +4,9 @@ import { AdminService } from './admin.service';
 import { BaseController, BaseService } from '../../commons';
 import { Admin } from './entities';
 import {Public} from "../../public.metadata";
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('admin')
 @Controller('admin')
 export class AdminController extends BaseController<Admin> {
   constructor(private readonly adminService: AdminService) {
